@@ -1,0 +1,321 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+\usepackage{fontawesome}
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+% \usepackage{fontawesome}
+% \newcommand\faSkype{{\FA\symbol{"F17E}}}
+\listfiles
+% personal data
+\name{Bc.\,David}{Navrkal}
+\title{Curriculum vitae}                               % optional, remove / comment the line if not wanted
+\address{Brno}{Czech Republic}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+420~774~052~053}                   % optional, remove / comment the line if not wanted remove / comment the line if not wanted
+\email{navrkald@gmail.com}                               % optional,
+%\homepage{https://www.davesworld.eu}                         % optional, remove / comment the line if not wanted
+\social[linkedin][https://cz.linkedin.com/in/david-navrkal-bbb5b126]{My Linkedin}
+\social[github][https://github.com/navrkald]{My Github} 
+% \phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
+%\faSkype{} Skype
+%\homepage{https://www.linkedin.com/pub/david-navrkal/26/5b1/bbb}                         % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+\photo[64pt][0.4pt]{David_picture.jpg}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+% \quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Education}
+\cventry{2009--2014}{Bachelor}{Brno University of Technology, Faculty of Information Technology}{Brno}{}{University provides general IT knowledge, focused o programming mainly in C/C++.}
+\cventry{2015--2017}{Master}{Zlin Tomas Bata University, Faculty of Applied Informatics}{Brno}{}{The study was done in combined form next to work in AVG. All subjects are done, only Diploma Thesis needs to be finished.}
+  % arguments 3 to 6 can be left empty
+%\cventry{year--year}{Degree}{Institution}{City}{\textit{college }}{Description}
+
+\section{Bachelors thesis}
+\cvitem{title}{\emph{Conversion of Models of Regular Languages}}
+\cvitem{supervisors}{Ing. Zbyněk Křivka, Ph.D.}
+\cvitem{description}{Thesis deals with how to didactically demonstrate models of regular languages focusing
+on their mutual conversions. Application was programmed in language C++ using graphical library Qt 5.}
+
+\section{Diploma thesis}
+\cvitem{title}{\emph{Conversion of Models of Context-Free Languages}}
+\cvitem{supervisors}{doc. Ing. Roman Senkerik, Ph.D.}
+\cvitem{description}{Thesis extents Bachelors thesis of support of models context-free languages and is also written in C++ using graphical library Qt 5.}
+
+\section{Experience}
+\subsection{Vocational}
+\cventry{2014--present}{C++ developer}{AVG}{Brno}{}{
+Responsible for developing and maintaining product AVG Remote Administration in small team of 2 developers. The product is written entirely written in C++ and for GUI is used MFC. The product has 2 main applications:
+\begin{itemize}%
+\item \underline{Admin Server}, which includes database and communicating with AVG Anti-viruses and Admin Console. Supported databases are Firebird, MS SQL, MySql, Oracle.  
+\item \underline{Admin Console}, which represents UI to Admin server.
+\end{itemize}
+Another applications are:
+\begin{itemize}%
+\item \underline{Network Installer}, which performs remote installation of AVG Anti-viruses. 
+\item \underline{Server monitor}, which is small app controling Admin Server Service.
+\item \underline{Server Wizard}, which deploys and upgrades database.
+\end{itemize}
+I am participating on every component, but mainly on Network Installer which includes using WMI and bat and PowerShell scripts.
+At work we are working in Agile methodology including web tools like JIRA, Confluence and Stash. As version control system we are using Git and development IDE Visual Studio.
+Minor work also includes developing tool written in C\# which analyzes user clicks and stores them in MySql. 
+}
+
+\cventry{2013--2014}{Linux Administrator}{Unify}{Brno}{}{
+Remote administration and monitoring of multiple Linux servers in VMware. Working with command line, scripting in Bash. Managing JIRA and Confluence.\newline{}%
+Detailed achievements:%
+\begin{itemize}%
+\item Settings Linux antivirus to scan official production of software for Linux phones.
+	\begin{itemize}%
+		\item Linux antivirus does not provide direct output if files are safe or not, either exist status, so log files was needed to be parsed and analyzed.  
+	\end{itemize}
+\item Transition from Clearcase to Git:
+  \begin{itemize}%
+  \item My role was transition from building on Red Hat Enterprise Linux 3 (RHEL3) to Unbuntu 12.04 LTS 
+  		\begin{itemize}
+  		\item Software for phones was build on RHEL3, but Git is not working here, so it needs to modify source codes, building scripts, makefiles and enviroment in Ubuntu to get it work.
+  		\end{itemize}
+  \end{itemize}
+\end{itemize}}
+
+\section{Languages}
+\cvitemwithcomment{Czech}{Mother tongue}{}
+\cvitemwithcomment{English}{Fluent}{}
+\cvitemwithcomment{Russian}{Basics}{}
+\cvitemwithcomment{German}{Basics}{}
+
+\section{Programming languages}
+\cvitemwithcomment{C/C++}{\includegraphics[scale=0.40]{5stars.png}}{}
+\cvitemwithcomment{Qt}{\includegraphics[scale=0.40]{5stars.png}}{}
+\cvitemwithcomment{C\#}{\includegraphics[scale=0.40]{4stars.png}}{}
+\cvitemwithcomment{Powershell}{\includegraphics[scale=0.40]{3stars.png}}{}
+\cvitemwithcomment{Bash}{\includegraphics[scale=0.40]{3stars.png}}{}
+\cvitemwithcomment{Java}{\includegraphics[scale=0.40]{3stars.png}}{}
+\cvitemwithcomment{\LaTeX}{\includegraphics[scale=0.40]{2stars.png}}{(This CV and Diploma thesis are written in \LaTeX)}
+\cvitemwithcomment{HTML/CSS}{\includegraphics[scale=0.40]{2stars.png}}{}
+\cvitemwithcomment{Python}{\includegraphics[scale=0.40]{1stars.png}}{}
+
+\section{OS preferences}
+\cvitemwithcomment{Linux}{\includegraphics[scale=0.40]{5stars.png}}{(My favorite distributions are Ubuntu and Debian)}
+\cvitemwithcomment{Windows}{\includegraphics[scale=0.40]{5stars.png}}{}
+\cvitemwithcomment{Unix}{\includegraphics[scale=0.40]{3stars.png}}{}
+\cvitemwithcomment{Mac}{\includegraphics[scale=0.40]{1stars.png}}{}
+
+\section{Code editors preferences}
+\cvitemwithcomment{Visual Studio}{\includegraphics[scale=0.40]{5stars.png}}{}
+\cvitemwithcomment{Geany}{\includegraphics[scale=0.40]{5stars.png}}{}
+\cvitemwithcomment{Vim}{\includegraphics[scale=0.40]{3stars.png}}{}
+\cvitemwithcomment{Eclipse}{\includegraphics[scale=0.40]{3stars.png}}{}
+\cvitemwithcomment{Netbeams}{\includegraphics[scale=0.40]{3stars.png}}{}
+\cvitemwithcomment{Notepad++}{\includegraphics[scale=0.40]{2stars.png}}{}
+\cvitemwithcomment{Powershell ISE}{\includegraphics[scale=0.40]{1stars.png}}{}
+
+\section{Projects}
+\cvitemwithcomment{C++, Qt}{}
+{
+\begin{itemize}
+	\item Regular convertor (2014) - \href{https://github.com/navrkald/regularConvertor}{Link to sources}
+	\begin{itemize}
+		\item Educational application for conversion finite automata and regular expression.
+	\end{itemize}
+	\item Contex-free convertor (2016) - \href{https://github.com/navrkald/regularConvertor}{Link to sources}
+	\begin{itemize}
+		\item Basicaly it is Regular convertor extended of models of context-free languages.
+	\end{itemize}
+	\item Game draughts (2013)
+	\begin{itemize}
+		\item Graphical application for playing draughts with human player or with computer.
+		\item Network application client-server.
+	\end{itemize}	 
+\end{itemize}
+}
+\cvitemwithcomment{C++, wxWidgets}{}
+{
+\begin{itemize}
+	\item Game pong - written in C++ and GUI in wxWidgets (2015) - \href{https://github.com/navrkald/Game-pong}{Link to sources}  	 
+\end{itemize}
+}
+
+\cvitemwithcomment{C++}{}
+{
+\begin{itemize}
+	\item Discrete simulator (2012)
+	\begin{itemize}
+		\item Application also offers support infrastructure for discrete modelling of queueing systems.
+	\end{itemize}
+\end{itemize}
+}
+\cvitemwithcomment{C}{}
+{
+	\begin{itemize}
+		\item Series of homeworks of programming NVIDIA graphics card written in CUDA using C. (2016) \href{https://github.com/navrkald/Zlin_NVIDIA_programming_homeworks}{Link to sources}
+		\item Series of C homeworks at school in Zlin (2016) - \href{https://github.com/navrkald/Zlin-C-programming-homeworks}{Link to sources} 
+		\item Graph analyser (2012)
+		\begin{itemize}
+			\item Text program which analyse undirected graphs and print their properties.
+			\item Input is loaded in format called Trivial Graph Format (TGF).
+		\end{itemize}
+		\item TCP scaner (2012)
+		\begin{itemize}
+			\item Network program which scans selected TCP ports on selected computers.
+			\item Application uses BSD sockets.
+		\end{itemize}	
+		\item Interpreter for language Lua (2011)
+		\begin{itemize}
+			\item Interpreter consist of lexical parser, syntactic parser, expression parser and interpreter.
+		\end{itemize}
+%		\item Sleeping barber problem (2011)
+%		\begin{itemize}
+%			\item Solving using Linux semaphores and processes.
+%		\end{itemize}											
+	\end{itemize}
+}
+\cvitemwithcomment{Java}{}
+{
+\begin{itemize}
+	\item Petri net simulator (2012)	
+	\begin{itemize}
+		\item Includes editor of Petri net and performing simulation.
+		\item Network application client/server.
+	\end{itemize}
+\end{itemize}
+}
+
+\cvitemwithcomment{C\#}{}
+{
+\begin{itemize}
+	\item SQM Analyzer - Enxtend and maintain at AVG (2016)
+	\begin{itemize}
+		\item Gets text files with data how customers are using AVG Remote Administraton, and feads with this data MySql db. 	
+		\item In GUI (Winforms) shows graphs and tables with structuded data.
+	\end{itemize}
+	\item Graphic database application - school project (2013)	
+\end{itemize}
+}
+
+\cvitemwithcomment{python, wxWidgets}{}
+{
+\begin{itemize}
+	\item Simple calculator - School project in Zlin (2016) - \href{https://github.com/navrkald/Zlin_wxWidgets_python_simple_calculator}{Link to sources} 
+\end{itemize}
+}
+
+\cvitemwithcomment{\LaTeX}{}
+{
+\begin{itemize}
+	\item This CV (2016) - \href{https://github.com/navrkald/CV_david_navrkal}{Link to sources} 
+\end{itemize}
+}
+
+\section{Computer skills}
+\cvitem{Programs}{Vim, top, screen, ps, make, ant, sed, awk, putty, ssh, Jenkins, Nagios, Byobu, Git, Clearcase, Qt Creator, NetBeans, World, Excel, Outlook, Open Office, \LaTeX.}
+
+\cvitem{OS}{Linux (Debian, Ubuntu) - expert, Windows XP/7 - advanced user.}
+%\cvdoubleitem{category 1}{XXX, YYY, ZZZ,dsadsadsa,dsa,dsa,dsa,,dsa,dsa,dsa,dsa,dsadsa,dsa,dsa,dsa,dsa,dsa,dsa,dsa}{category 4}{XXX, YYY, ZZZ}
+%\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
+%\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
+
+\section{Interests}
+\cvitem{Technical}{New technologies, Linux, programming, Raspberry Pi, Android, understanding how technologies works, disassembling thinks, computer games.} 
+\cvitem{Non-technical}{Cooking, trips in nature, mountain bike, meeting with friend in pub, board games, movies, gardening, girlfriend, personal development, popular science, listening radio, reading news, travelling.}
+
+
+%\section{Extra 1}
+%\cvlistitem{Item 1}
+%\cvlistitem{Item 2}
+%\cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
+
+%\section{Extra 2}
+%\cvlistdoubleitem{Item 1}{Item 4}
+%\cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
+%\cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
+
+%\section{References}
+%\begin{cvcolumns}
+%  \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
+%  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
+%  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
+%\end{cvcolumns}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+\clearpage
+%-----       letter       ---------------------------------------------------------
+% recipient data
+%\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
+%\date{January 01, 1984}
+%\opening{Dear Sir or Madam,}
+%\closing{Yours faithfully,}
+%\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+%\makelettertitle
+
+%Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
+%
+%Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
+
+%Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
+
+%Albert Einstein discovered that $e=mc^2$ in 1905.
+
+%\[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
+
+%\makeletterclosing
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.
+
+Senior UNIX System Administrator
+Req 6887
+Brno
+Information Technology: Junior IT Support Specialist Req 7130 Brno
