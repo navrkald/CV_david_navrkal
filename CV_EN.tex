@@ -177,6 +177,10 @@ Detailed achievements:%
 	\begin{itemize}
 		\item Application also offers support infrastructure for discrete modelling of queueing systems.
 	\end{itemize}
+	\item 24h challenge to create DNS cache optimalized for high performance (2016) - \href{https://github.com/navrkald/DNSCache}{Link to sources}
+	\begin{itemize}
+		\item Application uses custom implementation of double linked queue for keep order of dns records (to free most oldest records) with direct access to elements and unordered map (hash table) from standard library. (Insert, update and search operations are done in constant time!)
+	\end{itemize}
 \end{itemize}
 }
 \cvitemwithcomment{C}{}
