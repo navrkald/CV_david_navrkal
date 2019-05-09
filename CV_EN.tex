@@ -25,16 +25,18 @@
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 % \usepackage{fontawesome}
 % \newcommand\faSkype{{\FA\symbol{"F17E}}}
+
+% \def\CC{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bf ++}}}
 \listfiles
 % personal data
 \name{Ing.\,David}{Navrkal}
 \title{Curriculum vitae}                               % optional, remove / comment the line if not wanted
-\address{Brno}{Czech Republic}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\address{Prague}{Czech Republic}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 \phone[mobile]{+420~774~052~053}                   % optional, remove / comment the line if not wanted remove / comment the line if not wanted
 \email{navrkald@gmail.com}                               % optional,
 %\homepage{https://www.davesworld.eu}                         % optional, remove / comment the line if not wanted
-\social[linkedin][https://cz.linkedin.com/in/david-navrkal-bbb5b126]{My Linkedin}
-\social[github][https://github.com/navrkald]{My Github} 
+\social[linkedin][www.linkedin.com/in/david-navrkal-bbb5b126]{Linkedin link}
+\social[github][www.github.com/navrkald]{Github link}
 % \phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
 %\faSkype{} Skype
 %\homepage{https://www.linkedin.com/pub/david-navrkal/26/5b1/bbb}                         % optional, remove / comment the line if not wanted
@@ -57,31 +59,19 @@
 \begin{document}
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
+
 \makecvtitle
-
-\section{Education}
-\cventry{2009--2014}{Bachelor's degree}{Brno University of Technology, Faculty of Information Technology}{Brno}{}{University provides general IT knowledge, focused on programming mainly in C/C++.}
-\cventry{2015--2017}{Master's degree}{Zlin Tomas Bata University, Faculty of Applied Informatics}{Brno}{}{The study was done in combined form alongside working.}
-  % arguments 3 to 6 can be left empty
-%\cventry{year--year}{Degree}{Institution}{City}{\textit{college }}{Description}
-
-\section{Bachelors thesis}
-\cvitem{title}{\emph{Conversion of Models of Regular Languages}}
-\cvitem{supervisor}{Ing. Zbyněk Křivka, Ph.D.}
-\cvitem{description}{Thesis deals with how to didactically demonstrate models of regular languages focusing
-on their mutual conversions. Application was programmed in C++ using graphical library Qt 5.}
-
-\section{Diploma thesis}
-\cvitem{title}{\emph{Conversion of Models of Context-Free Languages}}
-\cvitem{supervisor}{doc. Ing. Roman Senkerik, Ph.D.}
-\cvitem{description}{It extends upon my Bachelor's thesis about support of  context-free language model conversions and is also written in C++ using graphical library Qt 5.}
 
 \section{Experience}
 
-\cventry{January 2017--Present}{UWP, C\#, C++/CX Application developer}{Master Internet}{Brno}{}{
-Responsibility for developing and maintaining app \textit{Baby Monitor} (\href{https://www.anniebabymonitor.com/}{link}) in small team of 2 developers. The application streams video and audio. The product is designed for Universal Windows Platform (UWP), so it runs on every device, where Windows 10 is installed. This product is written mainly in C\# and some performance critical parts are developped in C++/CX.
-This job also included architectural proposal and development of new generation software \textit{Baby monitor 2} based on WebRTC and MQTT. Because both applications are multi-platform, it also included cooperation with other teams maintaining Android and IOS versions.
-This job required ability to write general and maintainable code to match changing requirements and reusing previously written code. Part of implementing new features was precise documentation. TCP, UDP, REST and MQTT are used for communication. Version control was maintained by Git. IDE Visual Studio 2017 and other tools like Gitlab, Redmine, Slack were also used.
+\cventry{December 2017--June 2019}{C\texttt{++}, DevOps(Ansible, AWS cloud, Jenkins), Oracle SQL Linux Developer, Perl}{contractor at Deutsche Boerse Services}{Prague}{}{
+	At this company I have been part of RTS team (Real Time Settlement) working on core of Cleasrtream bank system. For development was used technologies such as C\texttt{++}11, Oracle SQL and Perl for integration tests. I have written several new binaries including automated tests and fixed more that thousand HP Forify critical security findings. \endgraf Because of slow on premise servers maintained manually and used both for development and integration testing and it was needed to accelerate our development cicle. Fist I have described all our dev infrastructure in AWS cloud using ansbile clode. Our dev infrastructure included machines for developers, jenkins server and build and regregression testing servers. Next I have speedup our automated integration tests to 1h where sequentially on prem. taked 24h per project with ability to run projects in parralel. Having described infrastructure in code gived us opportunity to migrate from On premise hand maintained machines to cloud ones. From that momenent we had oppurtunity to test and review our environment changes before actual deploiment. Also it gived us reproducible deterministic envirnment both for automated testing and developers. Best of it is that code is written using Ansible roles designed as general reusable Lego brigs which ensured that developers was using same enviromnet as our regression testing infrastructure. The code was written in general way so other teams has started to use our cloud solution just using slightly different parameters and ansbile roles but sharing 90\% of already written code.
+}
+
+\cventry{January 2017--November 2017}{UWP, C\#, C++/CX Application developer}{Master Internet}{Brno}{}{
+	Responsibility for developing and maintaining app \textit{Baby Monitor} (\href{https://www.anniebabymonitor.com/}{link}) in small team of 2 developers. The application streams video and audio. The product is designed for Universal Windows Platform (UWP), so it runs on every device, where Windows 10 is installed. This product is written mainly in C\# and some performance critical parts are developped in C++/CX.
+	This job also included architectural proposal and development of new generation software \textit{Baby monitor 2} based on WebRTC and MQTT. Because both applications are multi-platform, it also included cooperation with other teams maintaining Android and IOS versions.
+	This job required ability to write general and maintainable code to match changing requirements and reusing previously written code. Part of implementing new features was precise documentation. TCP, UDP, REST and MQTT are used for communication. Version control was maintained by Git. IDE Visual Studio 2017 and other tools like Gitlab, Redmine, Slack were also used.
 }
 
 \cventry{November 2014--October 2016}{C++ developer}{AVG}{Brno}{}{
@@ -118,6 +108,23 @@ Detailed achievements:%
   \end{itemize}
 \end{itemize}}
 
+\section{Education}
+\cventry{2009--2014}{Bachelor's degree}{Brno University of Technology, Faculty of Information Technology}{Brno}{}{University provides general IT knowledge, focused on programming mainly in C/C++.}
+\cventry{2015--2017}{Master's degree}{Zlin Tomas Bata University, Faculty of Applied Informatics}{Brno}{}{The study was done in combined form alongside working.}
+% arguments 3 to 6 can be left empty
+%\cventry{year--year}{Degree}{Institution}{City}{\textit{college }}{Description}
+
+\section{Bachelors thesis}
+\cvitem{title}{\emph{Conversion of Models of Regular Languages}}
+\cvitem{supervisor}{Ing. Zbyněk Křivka, Ph.D.}
+\cvitem{description}{Thesis deals with how to didactically demonstrate models of regular languages focusing
+	on their mutual conversions. Application was programmed in C++ using graphical library Qt 5.}
+
+\section{Diploma thesis}
+\cvitem{title}{\emph{Conversion of Models of Context-Free Languages}}
+\cvitem{supervisor}{doc. Ing. Roman Senkerik, Ph.D.}
+\cvitem{description}{It extends upon my Bachelor's thesis about support of context-free language model conversions and is also written in C++ using graphical library Qt 5.}
+
 \section{Languages}
 \cvitemwithcomment{Czech}{Mother tongue}{}
 \cvitemwithcomment{English}{Fluent}{}
@@ -126,29 +133,30 @@ Detailed achievements:%
 
 \section{Programming languages}
 \cvitemwithcomment{C/C++}{\includegraphics[scale=0.40]{5stars.png}}{}
-\cvitemwithcomment{Qt}{\includegraphics[scale=0.40]{5stars.png}}{}
+\cvitemwithcomment{Ansible}{\includegraphics[scale=0.40]{5stars.png}}{}
+\cvitemwithcomment{Bash}{\includegraphics[scale=0.40]{5stars.png}}{}
+\cvitemwithcomment{Qt}{\includegraphics[scale=0.40]{4stars.png}}{}
 \cvitemwithcomment{C\#}{\includegraphics[scale=0.40]{4stars.png}}{}
-\cvitemwithcomment{Powershell}{\includegraphics[scale=0.40]{3stars.png}}{}
-\cvitemwithcomment{Bash}{\includegraphics[scale=0.40]{3stars.png}}{}
+\cvitemwithcomment{Perl}{\includegraphics[scale=0.40]{3stars.png}}{}
+\cvitemwithcomment{Python}{\includegraphics[scale=0.40]{3stars.png}}{}
 \cvitemwithcomment{Java}{\includegraphics[scale=0.40]{3stars.png}}{}
+\cvitemwithcomment{Groovy}{\includegraphics[scale=0.40]{3stars.png}}{}
+\cvitemwithcomment{Powershell}{\includegraphics[scale=0.40]{2stars.png}}{}
 \cvitemwithcomment{\LaTeX}{\includegraphics[scale=0.40]{2stars.png}}{(This CV and Diploma thesis are written in \LaTeX)}
 \cvitemwithcomment{HTML/CSS}{\includegraphics[scale=0.40]{2stars.png}}{}
-\cvitemwithcomment{Python}{\includegraphics[scale=0.40]{1stars.png}}{}
+
 
 \section{OS preferences}
 \cvitemwithcomment{Linux}{\includegraphics[scale=0.40]{5stars.png}}{(My favorite distributions are Ubuntu and Debian)}
-\cvitemwithcomment{Windows}{\includegraphics[scale=0.40]{5stars.png}}{}
-\cvitemwithcomment{Unix}{\includegraphics[scale=0.40]{3stars.png}}{}
-\cvitemwithcomment{Mac}{\includegraphics[scale=0.40]{1stars.png}}{}
+\cvitemwithcomment{Windows}{\includegraphics[scale=0.40]{4stars.png}}{}
 
 \section{Code editors preferences}
+\cvitemwithcomment{Qt Creator}{\includegraphics[scale=0.40]{5stars.png}}{}
+\cvitemwithcomment{VS Code}{\includegraphics[scale=0.40]{5stars.png}}{}
 \cvitemwithcomment{Visual Studio}{\includegraphics[scale=0.40]{5stars.png}}{}
-\cvitemwithcomment{Geany}{\includegraphics[scale=0.40]{5stars.png}}{}
-\cvitemwithcomment{Vim}{\includegraphics[scale=0.40]{3stars.png}}{}
-\cvitemwithcomment{Eclipse}{\includegraphics[scale=0.40]{3stars.png}}{}
-\cvitemwithcomment{Netbeams}{\includegraphics[scale=0.40]{3stars.png}}{}
-\cvitemwithcomment{Notepad++}{\includegraphics[scale=0.40]{2stars.png}}{}
-\cvitemwithcomment{Powershell ISE}{\includegraphics[scale=0.40]{1stars.png}}{}
+\cvitemwithcomment{Vim}{\includegraphics[scale=0.40]{4stars.png}}{}
+\cvitemwithcomment{Atom}{\includegraphics[scale=0.40]{4stars.png}}{}
+\cvitemwithcomment{Pycharm}{\includegraphics[scale=0.40]{4stars.png}}{}
 
 \section{Projects}
 \cvitemwithcomment{C++, Qt}{}
@@ -252,16 +260,15 @@ Detailed achievements:%
 }
 
 \section{Computer skills}
-\cvitem{Programs}{Vim, top, screen, ps, make, ant, sed, awk, putty, ssh, Jenkins, Nagios, Byobu, Git, Clearcase, Qt Creator, NetBeans, World, Excel, Outlook, Open Office, \LaTeX.}
+\cvitem{Programs}{Vim, top, screen, ps, make, ant, sed, awk, putty, ssh, Jenkins, Nagios, Byobu, Git, Qt Creator, World, Excel, Outlook, Open Office, \LaTeX.}
 
-\cvitem{OS}{Linux (Debian, Ubuntu) - expert, Windows XP/7 - advanced user.}
 %\cvdoubleitem{category 1}{XXX, YYY, ZZZ,dsadsadsa,dsa,dsa,dsa,,dsa,dsa,dsa,dsa,dsadsa,dsa,dsa,dsa,dsa,dsa,dsa,dsa}{category 4}{XXX, YYY, ZZZ}
 %\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
 %\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
 
 \section{Interests}
 \cvitem{Technical}{New technologies, Linux, programming, Raspberry Pi, Android, understanding how technologies works, disassembling thinks, computer games.} 
-\cvitem{Non-technical}{Cooking, trips in nature, mountain bike, meeting with friend in pub, board games, movies, gardening, girlfriend, personal development, popular science, listening radio, reading news, travelling.}
+\cvitem{Non-technical}{Cooking, trips in nature, mountain bike, meeting with friend in pub, board games, movies, gardening, personal development, popular science, listening radio, travelling.}
 
 
 %\section{Extra 1}
