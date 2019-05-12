@@ -13,7 +13,7 @@
 \moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
-
+\usepackage{graphicx}
 \usepackage{fontawesome}
 % character encoding
 \usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
@@ -35,14 +35,14 @@
 \phone[mobile]{+420~774~052~053}                   % optional, remove / comment the line if not wanted remove / comment the line if not wanted
 \email{navrkald@gmail.com}                               % optional,
 %\homepage{https://www.davesworld.eu}                         % optional, remove / comment the line if not wanted
-\social[linkedin][www.linkedin.com/in/david-navrkal-bbb5b126]{Linkedin link}
-\social[github][www.github.com/navrkald]{Github link}
+\social[linkedin][www.linkedin.com/in/david-navrkal-bbb5b126]{LinkedIn link}
+\social[github][www.github.com/navrkald]{GitHub link}
 % \phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
 %\faSkype{} Skype
 %\homepage{https://www.linkedin.com/pub/david-navrkal/26/5b1/bbb}                         % optional, remove / comment the line if not wanted
 %\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
 \photo[64pt][0.4pt]{David_picture.jpg}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-% \quote{Some quote}                                 % optional, remove / comment the line if not wanted
+\quote{Hi I am passionate enthusiastic developer with great sense for detail and hight quality work. I am also team player, I love helping my colleagues and users as well. I enjoy learning new technologies and improving product which I am working on.}
 
 % to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
 %\makeatletter
@@ -56,6 +56,14 @@
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
+%\newcommand{\CS}{C\nolinebreak\hspace{-.05em}\raisebox{.6ex}{\tiny\bf \#}}
+%\newcommand{\Csh}{C\includegraphics{hash-symbol}}
+\usepackage{fontspec}
+
+\newfontface\lserif{Liberation Serif}
+
+\newcommand{\Csh}{C{\lserif{\#}}}
+%\def\CC{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bf ++}}}
 \begin{document}
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
@@ -64,66 +72,52 @@
 
 \section{Experience}
 
-\cventry{December 2017--June 2019}{C\texttt{++}, DevOps(Ansible, AWS cloud, Jenkins), Oracle SQL Linux Developer, Perl}{contractor at Deutsche Boerse Services}{Prague}{}{
-	At this company I have been part of RTS team (Real Time Settlement) working on core of Cleasrtream bank system. For development was used technologies such as C\texttt{++}11, Oracle SQL and Perl for integration tests. I have written several new binaries including automated tests and fixed more that thousand HP Forify critical security findings. \endgraf Because of slow on premise servers maintained manually and used both for development and integration testing and it was needed to accelerate our development cicle. Fist I have described all our dev infrastructure in AWS cloud using ansbile clode. Our dev infrastructure included machines for developers, jenkins server and build and regregression testing servers. Next I have speedup our automated integration tests to 1h where sequentially on prem. taked 24h per project with ability to run projects in parralel. Having described infrastructure in code gived us opportunity to migrate from On premise hand maintained machines to cloud ones. From that momenent we had oppurtunity to test and review our environment changes before actual deploiment. Also it gived us reproducible deterministic envirnment both for automated testing and developers. Best of it is that code is written using Ansible roles designed as general reusable Lego brigs which ensured that developers was using same enviromnet as our regression testing infrastructure. The code was written in general way so other teams has started to use our cloud solution just using slightly different parameters and ansbile roles but sharing 90\% of already written code.
+\cventry{December 2017--June 2019}{Linux C\texttt{++}, DevOps(Ansible, AWS cloud, Jenkins), Oracle SQL, Perl back-end developer}{contractor at Deutsche Boerse Services}{Prague}{}{
+	At this company I have been part of RTS team (Real Time Settlement) working on core of Cleasrtream bank system. For development was used technologies such as C\texttt{++}11, Oracle SQL and Perl for integration tests. I have written several new binaries including automated tests and fixed more that thousand HP Fortify critical security findings. \endgraf Because of slow on premise servers maintained manually and used both for development and integration testing and it was needed to accelerate our development cycle. First I have described all our dev infrastructure in AWS cloud using Ansbile code. Our dev infrastructure included machines for developers, Jenkins server and build and regression testing servers. Next I have speedup our automated integration tests to 1h where sequentially on prem. took 24h per project with ability to run projects in parallel. Having described infrastructure in code gave us opportunity to migrate to cloud. From that moment we had opportunity to test and review our dev and regression environment changes before actual deployment. Also it gave us reproducible deterministic environment both for automated testing and developers. Best of it is that code is written using Ansible roles designed as general reusable Lego brigs which ensured that developers was using same environment as our regression testing infrastructure. The code was written in general way so other teams has started to use our cloud solution just using slightly different parameters and Ansible roles but sharing 90\% of already written code.
 }
 
-\cventry{January 2017--November 2017}{UWP, C\#, C++/CX Application developer}{Master Internet}{Brno}{}{
-	Responsibility for developing and maintaining app \textit{Baby Monitor} (\href{https://www.anniebabymonitor.com/}{link}) in small team of 2 developers. The application streams video and audio. The product is designed for Universal Windows Platform (UWP), so it runs on every device, where Windows 10 is installed. This product is written mainly in C\# and some performance critical parts are developped in C++/CX.
+\cventry{January 2017--November 2017}{Windows UWP, \Csh{}, C\texttt{++}/CX application developer}{Master Internet}{Brno}{}{
+	Responsibility for developing and maintaining app \textit{Baby Monitor} (\href{https://www.anniebabymonitor.com/}{link}) in small team of 2 developers. The application streams video and audio. The product is designed for Universal Windows Platform (UWP), so it runs on every device, where Windows 10 is installed. This product is written mainly in \Csh{} and some performance critical parts are developed in C\texttt{++}/CX.
 	This job also included architectural proposal and development of new generation software \textit{Baby monitor 2} based on WebRTC and MQTT. Because both applications are multi-platform, it also included cooperation with other teams maintaining Android and IOS versions.
 	This job required ability to write general and maintainable code to match changing requirements and reusing previously written code. Part of implementing new features was precise documentation. TCP, UDP, REST and MQTT are used for communication. Version control was maintained by Git. IDE Visual Studio 2017 and other tools like Gitlab, Redmine, Slack were also used.
 }
 
-\cventry{November 2014--October 2016}{C++ developer}{AVG}{Brno}{}{
-Responsible for developing and maintaining product AVG Remote Administration in small team of 2 developers. (\href{http://www.avg.com/us-en/remote-administration}{Link to product page.}) The product is entirely written in C++ and for GUI is used MFC. The product consists of 2 main applications:
-\begin{itemize}%
-\item \underline{Admin Server}, which includes database and communicating with AVG Anti-viruses and with Admin Console. Supported databases are Firebird, MS SQL, MySql and Oracle.  
-\item \underline{Admin Console}, which represents UI to Admin server.
-\end{itemize}
-Another applications are:
-\begin{itemize}%
-\item \underline{Network Installer}, which performs remote installation of AVG Anti-viruses. 
-\item \underline{Server monitor}, which is small app controling Admin Server Service.
-\item \underline{Server Wizard}, which deploys and upgrades database.
-\end{itemize}
-I am participating on every component, but mainly on Network Installer which includes using WMI technology and bat and PowerShell scripts.
-At work we are working in Agile methodology including web tools like JIRA, Confluence and Stash. As version control system we are using Git and development IDE Visual Studio.
-Minor work also includes developing tool written in C\# which analyzes user clicks and stores them in MySql. 
+\cventry{November 2014--October 2016}{Windows C\texttt{++} application developer}{AVG}{Brno}{}{
+	Responsible for developing and maintaining product AVG Remote Administration for managing and installing anti-viruses in companies. (\href{http://www.avg.com/us-en/remote-administration}{Link to product page.}) 
+	The product had client-sever architecture. Mainly used technologies was C\texttt{++}, MFC, REST API, WMI and Powershell and in minor use was also \Csh{}. Supported databases was Firebird, MS SQL, MySql and Oracle. For development was used Agile methodology and tools such as Git, Visual Studio, Jira, Confluence and Stash.
+%The product was entirely written in C\texttt{++}. The product had client-server architecture together with few other support tools. Client GUI was written in MFC and server part suported to store data in databases Firebird, MS SQL, MySql or Oracle. One of them was tool for remote installation of antivirus using WMI technilogy combinated with Powershell. For development was used tools such as Git, Jira, Confluence, Stash, Visual Studio and Agile metodology. For analizing product usage statistic was used tool written in \Csh{} which stored data in MySql.
+%\begin{itemize}%
+%\item \underline{Admin Server}, which includes database and communicating with AVG Anti-viruses and with Admin Console. Supported databases are Firebird, MS SQL, MySql and Oracle.  
+%\item \underline{Admin Console}, which represents UI to Admin server.
+%\end{itemize}
+%Another applications are:
+%\begin{itemize}%
+%\item \underline{Network Installer}, which performs remote installation of AVG Anti-viruses. 
+%\item \underline{Server monitor}, which is small app controling Admin Server Service.
+%\item \underline{Server Wizard}, which deploys and upgrades database.
+%\end{itemize}
+%I am participating on every component, but mainly on Network Installer which includes using WMI technology and bat and PowerShell scripts.
+%At work we are working in Agile methodology including web tools like JIRA, Confluence and Stash. As version control system we are using Git and development IDE Visual Studio.
+%Minor work also includes developing tool written in \Csh{} which analyzes user clicks and stores them in MySql. 
 }
 
 \cventry{January 2013--October 2014}{Linux Administrator}{Unify}{Brno}{}{
-Remote administration and monitoring of multiple Linux servers in VMware. Working with command line, scripting in Bash. Managing JIRA and Confluence.\newline{}%
-Detailed achievements:%
-\begin{itemize}%
-\item Settings Linux antivirus to scan official production of software for Linux phones.
-	\begin{itemize}%
-		\item Linux antivirus does not provide direct output if files are safe or not, either exist status, so log files was needed to be parsed and analyzed.  
-	\end{itemize}
-\item Transition from Clearcase to Git:
-  \begin{itemize}%
-  \item My role was transition from building on Red Hat Enterprise Linux 3 (RHEL3) to Unbuntu 12.04 LTS 
-  		\begin{itemize}
-  		\item Software for phones was build on RHEL3, but Git is not working here, so it needs to modify source codes, building scripts, makefiles and enviroment in Ubuntu to get it work.
-  		\end{itemize}
-  \end{itemize}
-\end{itemize}}
+	Remote administration and monitoring of multiple Linux servers in VMware. Working with command line and scripting in Bash. Managing JIRA and Confluence and participated on migration from RHEL with Clearcase to Ubuntu with Git.}
 
 \section{Education}
-\cventry{2009--2014}{Bachelor's degree}{Brno University of Technology, Faculty of Information Technology}{Brno}{}{University provides general IT knowledge, focused on programming mainly in C/C++.}
-\cventry{2015--2017}{Master's degree}{Zlin Tomas Bata University, Faculty of Applied Informatics}{Brno}{}{The study was done in combined form alongside working.}
+\cventry{2014}{Bachelor's degree}{Brno University of Technology, Faculty of Information Technology}{}{}{University provides general IT knowledge, focused on programming mainly in C/C\texttt{++} and Linux.}
+\cventry{2017}{Master's degree}{Zlin Tomas Bata University, Faculty of Applied Informatics}{}{}{The study was in combined form alongside permanent job.}
 % arguments 3 to 6 can be left empty
 %\cventry{year--year}{Degree}{Institution}{City}{\textit{college }}{Description}
 
 \section{Bachelors thesis}
-\cvitem{title}{\emph{Conversion of Models of Regular Languages}}
-\cvitem{supervisor}{Ing. Zbyněk Křivka, Ph.D.}
-\cvitem{description}{Thesis deals with how to didactically demonstrate models of regular languages focusing
-	on their mutual conversions. Application was programmed in C++ using graphical library Qt 5.}
+\cvitem{Title}{\emph{Conversion of Models of Regular Languages}}
+\cvitem{Description}{Thesis deals with how to didactically demonstrate models of regular languages focusing
+	on their mutual conversions. Application was programmed in C\texttt{++} using graphical library Qt 5.}
 
 \section{Diploma thesis}
-\cvitem{title}{\emph{Conversion of Models of Context-Free Languages}}
-\cvitem{supervisor}{doc. Ing. Roman Senkerik, Ph.D.}
-\cvitem{description}{It extends upon my Bachelor's thesis about support of context-free language model conversions and is also written in C++ using graphical library Qt 5.}
+\cvitem{Title}{\emph{Conversion of Models of Context-Free Languages}}
+\cvitem{Description}{It extends upon my Bachelor's thesis about support of context-free language model conversions using same technologies.}
 
 \section{Languages}
 \cvitemwithcomment{Czech}{Mother tongue}{}
@@ -132,11 +126,11 @@ Detailed achievements:%
 \cvitemwithcomment{German}{Basics}{}
 
 \section{Programming languages}
-\cvitemwithcomment{C/C++}{\includegraphics[scale=0.40]{5stars.png}}{}
+\cvitemwithcomment{C/C\texttt{++}}{\includegraphics[scale=0.40]{5stars.png}}{}
 \cvitemwithcomment{Ansible}{\includegraphics[scale=0.40]{5stars.png}}{}
 \cvitemwithcomment{Bash}{\includegraphics[scale=0.40]{5stars.png}}{}
 \cvitemwithcomment{Qt}{\includegraphics[scale=0.40]{4stars.png}}{}
-\cvitemwithcomment{C\#}{\includegraphics[scale=0.40]{4stars.png}}{}
+\cvitemwithcomment{\Csh{}}{\includegraphics[scale=0.40]{4stars.png}}{}
 \cvitemwithcomment{Perl}{\includegraphics[scale=0.40]{3stars.png}}{}
 \cvitemwithcomment{Python}{\includegraphics[scale=0.40]{3stars.png}}{}
 \cvitemwithcomment{Java}{\includegraphics[scale=0.40]{3stars.png}}{}
@@ -159,7 +153,7 @@ Detailed achievements:%
 \cvitemwithcomment{Pycharm}{\includegraphics[scale=0.40]{4stars.png}}{}
 
 \section{Projects}
-\cvitemwithcomment{C++, Qt}{}
+\cvitemwithcomment{C\texttt{++}, Qt}{}
 {
 \begin{itemize}
 	\item Regular convertor (2014) - \href{https://github.com/navrkald/regularConvertor}{Link to sources}
@@ -177,14 +171,14 @@ Detailed achievements:%
 	\end{itemize}	 
 \end{itemize}
 }
-\cvitemwithcomment{C++, wxWidgets}{}
+\cvitemwithcomment{C\texttt{++}, wxWidgets}{}
 {
 \begin{itemize}
-	\item Game pong - written in C++ and GUI in wxWidgets (2015) - \href{https://github.com/navrkald/Game-pong}{Link to sources}  	 
+	\item Game pong - written in C\texttt{++} and GUI in wxWidgets (2015) - \href{https://github.com/navrkald/Game-pong}{Link to sources}  	 
 \end{itemize}
 }
 
-\cvitemwithcomment{C++}{}
+\cvitemwithcomment{C\texttt{++}}{}
 {
 \begin{itemize}
 	\item Discrete simulator (2012)
@@ -193,7 +187,7 @@ Detailed achievements:%
 	\end{itemize}
 	\item 24h challenge to create DNS cache optimalized for high performance (2016) - \href{https://github.com/navrkald/DNSCache}{Link to sources}
 	\begin{itemize}
-		\item Application uses custom implementation of double linked queue for keep order of dns records (to free most oldest records) with direct access to elements and unordered map (hash table) from standard library. (Insert, update and search operations are done in constant time!)
+		\item Application uses custom implementation of double linked queue for keep order of DNS records (to free most oldest records) with direct access to elements and unordered map (hash table) from standard library. (Insert, update and search operations are done in constant time!)
 	\end{itemize}
 \end{itemize}
 }
@@ -228,12 +222,12 @@ Detailed achievements:%
 	\item Petri net simulator (2012)	
 	\begin{itemize}
 		\item Includes editor of Petri net and performing simulation.
-		\item Network application client/server.
+		\item Network application client-server.
 	\end{itemize}
 \end{itemize}
 }
 
-\cvitemwithcomment{C\#}{}
+\cvitemwithcomment{\Csh{}}{}
 {
 \begin{itemize}
 	\item SQM Analyzer - Enxtend and maintain at AVG (2016)
@@ -255,7 +249,7 @@ Detailed achievements:%
 \cvitemwithcomment{\LaTeX}{}
 {
 \begin{itemize}
-	\item This CV (2016) - \href{https://github.com/navrkald/CV_david_navrkal}{Link to sources} 
+	\item This CV - \href{https://github.com/navrkald/CV_david_navrkal}{Link to sources} 
 \end{itemize}
 }
 
@@ -267,8 +261,8 @@ Detailed achievements:%
 %\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
 
 \section{Interests}
-\cvitem{Technical}{New technologies, Linux, programming, Raspberry Pi, Android, understanding how technologies works, disassembling thinks, computer games.} 
-\cvitem{Non-technical}{Cooking, trips in nature, mountain bike, meeting with friend in pub, board games, movies, gardening, personal development, popular science, listening radio, travelling.}
+\cvitem{Technical}{New technologies, Linux, programming, Raspberry Pi, ownCloud, Android, understanding how technologies works, disassembling thinks, computer games.} 
+\cvitem{Non-technical}{Cooking, trips in nature, bicycle, meeting with friend in pub, board games, movies, gardening, personal development, popular science, listening music, traveling and reading.}
 
 
 %\section{Extra 1}
