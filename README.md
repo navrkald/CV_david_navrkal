@@ -1,6 +1,6 @@
 # How to download
 
-Click [here](CV_EN.pdf) to download latest version of CV.
+Click  [here](/../../raw/master/CV_EN.pdf) to download latest version of CV.
 
 # How to build
 
