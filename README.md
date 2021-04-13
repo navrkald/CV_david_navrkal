@@ -20,3 +20,12 @@ How to build:
 ```
 Press F1
 ```
+
+# TODO's
+[ ] Automate building and publishing new version of CV.
+Resources to study:
+* https://github.com/PHPirates/travis-ci-latex-pdf
+* https://github.com/sharelatex/github-latex-ci
+* https://github.com/niccokunzmann/ci-latex
+* https://tex.stackexchange.com/questions/398830/how-to-build-my-latex-automatically-using-travis-ci
+[] Cleanup git history and remove pdf from Git
