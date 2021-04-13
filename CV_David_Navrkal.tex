@@ -1,72 +1,32 @@
-%% start of file `template.tex'.
-%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License version 1.3c,
-% available at http://www.latex-project.org/lppl/.
+\documentclass[11pt,a4paper,sans]{moderncv}
 
-\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\moderncvstyle{classic}
 
-% moderncv themes
-\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-
-\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+\moderncvcolor{blue}
 \usepackage{graphicx}
 \usepackage{fontawesome}
-% character encoding
-\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
-%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
-
-% adjust the page margins
+\usepackage[utf8]{inputenc}
 \usepackage[scale=0.75]{geometry}
-%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
-%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
-% \usepackage{fontawesome}
-% \newcommand\faSkype{{\FA\symbol{"F17E}}}
-
-% \def\CC{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bf ++}}}
 \listfiles
+
 % personal data
 \name{Ing.\,David}{Navrkal}
-\title{Curriculum vitae}                               % optional, remove / comment the line if not wanted
-\address{Prague}{Czech Republic}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
-\phone[mobile]{+420~774~052~053}                   % optional, remove / comment the line if not wanted remove / comment the line if not wanted
-\email{navrkald@gmail.com}                               % optional,
-%\homepage{https://www.davesworld.eu}                         % optional, remove / comment the line if not wanted
+\title{Curriculum vitae}
+\address{Prague}{Czech Republic}
+\phone[mobile]{+420~774~052~053}
+\email{navrkald@gmail.com}
 \social[linkedin][www.linkedin.com/in/david-navrkal-bbb5b126]{LinkedIn link}
 \social[github][www.github.com/navrkald]{GitHub link}
-% \phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
-%\faSkype{} Skype
-%\homepage{https://www.linkedin.com/pub/david-navrkal/26/5b1/bbb}                         % optional, remove / comment the line if not wanted
-%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
-\photo[64pt][0.4pt]{David_picture.jpg}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+\photo[64pt][0.4pt]{pictures/David_picture.jpg}
 \quote{Hi I am passionate enthusiastic developer with great sense for detail and hight quality work. I am also team player, I love helping my colleagues and users as well. I enjoy learning new technologies and improving product which I am working on.}
 
-% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
-
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
-%----------------------------------------------------------------------------------
-%            content
-%----------------------------------------------------------------------------------
-%\newcommand{\CS}{C\nolinebreak\hspace{-.05em}\raisebox{.6ex}{\tiny\bf \#}}
-%\newcommand{\Csh}{C\includegraphics{hash-symbol}}
 \usepackage{fontspec}
 
 \newfontface\lserif{Liberation Serif}
 
 \newcommand{\Csh}{C{\lserif{\#}}}
-%\def\CC{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bf ++}}}
 \begin{document}
-%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
-%-----       resume       ---------------------------------------------------------
+
 
 \makecvtitle
 
@@ -126,31 +86,31 @@
 \cvitemwithcomment{German}{Basics}{}
 
 \section{Programming languages}
-\cvitemwithcomment{C/C\texttt{++}}{\includegraphics[scale=0.40]{5stars.png}}{}
-\cvitemwithcomment{Ansible}{\includegraphics[scale=0.40]{5stars.png}}{}
-\cvitemwithcomment{Bash}{\includegraphics[scale=0.40]{5stars.png}}{}
-\cvitemwithcomment{Qt}{\includegraphics[scale=0.40]{4stars.png}}{}
-\cvitemwithcomment{\Csh{}}{\includegraphics[scale=0.40]{4stars.png}}{}
-\cvitemwithcomment{Perl}{\includegraphics[scale=0.40]{3stars.png}}{}
-\cvitemwithcomment{Python}{\includegraphics[scale=0.40]{3stars.png}}{}
-\cvitemwithcomment{Java}{\includegraphics[scale=0.40]{3stars.png}}{}
-\cvitemwithcomment{Groovy}{\includegraphics[scale=0.40]{3stars.png}}{}
-\cvitemwithcomment{Powershell}{\includegraphics[scale=0.40]{2stars.png}}{}
-\cvitemwithcomment{\LaTeX}{\includegraphics[scale=0.40]{2stars.png}}{(This CV and Diploma thesis are written in \LaTeX)}
-\cvitemwithcomment{HTML/CSS}{\includegraphics[scale=0.40]{2stars.png}}{}
+\cvitemwithcomment{C/C\texttt{++}}{\includegraphics[scale=0.40]{pictures/5stars.png}}{}
+\cvitemwithcomment{Ansible}{\includegraphics[scale=0.40]{pictures/5stars.png}}{}
+\cvitemwithcomment{Bash}{\includegraphics[scale=0.40]{pictures/5stars.png}}{}
+\cvitemwithcomment{Qt}{\includegraphics[scale=0.40]{pictures/4stars.png}}{}
+\cvitemwithcomment{\Csh{}}{\includegraphics[scale=0.40]{pictures/4stars.png}}{}
+\cvitemwithcomment{Perl}{\includegraphics[scale=0.40]{pictures/3stars.png}}{}
+\cvitemwithcomment{Python}{\includegraphics[scale=0.40]{pictures/3stars.png}}{}
+\cvitemwithcomment{Java}{\includegraphics[scale=0.40]{pictures/3stars.png}}{}
+\cvitemwithcomment{Groovy}{\includegraphics[scale=0.40]{pictures/3stars.png}}{}
+\cvitemwithcomment{Powershell}{\includegraphics[scale=0.40]{pictures/2stars.png}}{}
+\cvitemwithcomment{\LaTeX}{\includegraphics[scale=0.40]{pictures/2stars.png}}{(This CV and Diploma thesis are written in \LaTeX)}
+\cvitemwithcomment{HTML/CSS}{\includegraphics[scale=0.40]{pictures/2stars.png}}{}
 
 
 \section{OS preferences}
-\cvitemwithcomment{Linux}{\includegraphics[scale=0.40]{5stars.png}}{(My favorite distributions are Ubuntu and Debian)}
-\cvitemwithcomment{Windows}{\includegraphics[scale=0.40]{4stars.png}}{}
+\cvitemwithcomment{Linux}{\includegraphics[scale=0.40]{pictures/5stars.png}}{(My favorite distributions are Ubuntu and Debian)}
+\cvitemwithcomment{Windows}{\includegraphics[scale=0.40]{pictures/4stars.png}}{}
 
 \section{Code editors preferences}
-\cvitemwithcomment{Qt Creator}{\includegraphics[scale=0.40]{5stars.png}}{}
-\cvitemwithcomment{VS Code}{\includegraphics[scale=0.40]{5stars.png}}{}
-\cvitemwithcomment{Visual Studio}{\includegraphics[scale=0.40]{5stars.png}}{}
-\cvitemwithcomment{Vim}{\includegraphics[scale=0.40]{4stars.png}}{}
-\cvitemwithcomment{Atom}{\includegraphics[scale=0.40]{4stars.png}}{}
-\cvitemwithcomment{Pycharm}{\includegraphics[scale=0.40]{4stars.png}}{}
+\cvitemwithcomment{Qt Creator}{\includegraphics[scale=0.40]{pictures/5stars.png}}{}
+\cvitemwithcomment{VS Code}{\includegraphics[scale=0.40]{pictures/5stars.png}}{}
+\cvitemwithcomment{Visual Studio}{\includegraphics[scale=0.40]{pictures/5stars.png}}{}
+\cvitemwithcomment{Vim}{\includegraphics[scale=0.40]{pictures/4stars.png}}{}
+\cvitemwithcomment{Atom}{\includegraphics[scale=0.40]{pictures/4stars.png}}{}
+\cvitemwithcomment{Pycharm}{\includegraphics[scale=0.40]{pictures/4stars.png}}{}
 
 \section{Projects}
 \cvitemwithcomment{C\texttt{++}, Qt}{}

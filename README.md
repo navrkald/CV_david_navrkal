@@ -1,22 +1,19 @@
 # How to download
 
-Click  [here](/../../raw/master/CV_EN.pdf) to download latest version of CV.
+Click  [here](/../../raw/master/CV_David_Navrkal.pdf) to download latest version of CV.
 
 # How to build
 
 ```bash
-# Download and install TexMaker and dependencies
-sudo apt install texmaker texlive-fonts-extra
+# Download and install TexStudio and dependencies (On Ubuntu)
+sudo add-apt-repository ppa:sunderme/texstudio
+sudo apt-get update
+sudo apt install texstudio
 ```
 
-How to configure Texmaker:
+How to configure TeXstudio:
 ```
-In Texmaker go to Options -> Configure Texmaker -> Quick build -> LuaLaTeX + View PDF
-```
-
-How to configure spell check:
-```
-In Texmaker go to Options -> Configure Texmaker -> Editor -> Spelling directory -> /usr/share/myspell/dicts/en_GB.dic
+In TeXstudio go to Options -> Configure TeXstudio -> Default Compiler -> LuaLaTeX
 ```
 
 How to build:
