@@ -1,0 +1,267 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+\moderncvstyle{classic}
+
+\moderncvcolor{blue}
+\usepackage{graphicx}
+\usepackage{fontawesome}
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.75]{geometry}
+\listfiles
+
+% personal data
+\name{Ing.\,David}{Navrkal}
+\title{Curriculum vitae}
+\address{Prague}{Czech Republic}
+\phone[mobile]{+420~774~052~053}
+\email{navrkald@gmail.com}
+\social[linkedin][www.linkedin.com/in/david-navrkal-bbb5b126]{LinkedIn link}
+\social[github][www.github.com/navrkald]{GitHub link}
+\photo[64pt][0.4pt]{pictures/David_picture.jpg}
+\quote{Hi I am smart passionate enthusiastic AWS developer and DevOps engineer, believe in clean code, love automation and having excellent problem solving and fast learning skills. I am as well team player, don't hesitate to help anyone any time with any problem. Love learning new technologies and improving product which I am working on.}
+
+\usepackage{fontspec}
+
+\newfontface\lserif{Liberation Serif}
+
+\newcommand{\Csh}{C{\lserif{\#}}}
+\begin{document}
+	
+	
+	\makecvtitle
+	
+	\section{Experience}
+	
+	\cventry{July 2019--present}{Senior AWS Typescript Serverless Developer and Jenkins CI/CD expert}{contractor at MSD}{Prague}{}{
+		I was hired here originally as a developer without any previous knowledge of Typescript or Serverless framework, but due to my excellent learning skills I have quickly master these new technologies and due my DevOps experience I have quickly started to automate existing manual processes.\newline{}
+		Detailed achievements:
+		\begin{itemize}		
+			\item DevOps:
+			\begin{itemize}
+				\item CI/CD solution for Serverless micro service architecture:
+				\begin{itemize}
+					\item Reproducible builds and deployments using Jenkins and Docker with minimal space for human mistake.
+					\item Used technologies like Jenkins, Docker, Typescript, Jest, ESLint, Sonar, Bitbucket, Git and Jira all integrated together.
+					\item Used Declarative multi branch Jenkins pipeline same for CI and deployments.
+				\end{itemize}
+				\item CI/CD solution for npm packages
+				\begin{itemize}
+					\item Fully automatic builds of in house made npm packages, where developers was just literally writing code and reviewing PR's, where everything else was done by Jenkins automatically.
+					\item Automate compiling, yarn auditing, running tests, static code analysis via Sonar, computing coverage, packaging, publishing to Artifactory, versioning and auto generating change log and integration with JIRA.
+				\end{itemize}
+				\item CI/CD solution, writing and building in house made docker images.
+				\item Participating on building and designing E2E tests solution using Docker, Robot Framework, pipenv and Jenkins shared pipeline library for running them in CI mode, on demand, on schedule or Automatically after deployment.
+			\end{itemize}
+			\item Development:
+			\begin{itemize}
+				\item Writing high quality clean code and via review process helping other developers to improve their code as well.
+				\item Write unit and integration tests using Jest testing framework.
+				\item Introduced yarn lock for reproducible builds and managing dependencies.
+				\item Several contribution to open source SW used by company like Serverless Git variables or Robot Imap library.
+			\end{itemize}
+			\item Git:
+			\begin{itemize}
+				\item Introduced to use GitFlow and continuously educating developers how to use Git.
+				\item Introduced versioning of deployed micro-services in AWS using serverless-git-plugin-variables to track versions of deployed code without any space for human mistakes.
+				\item Enforcing Git rules, like e.g. prevent pushing binary files, or integration with JIRA using BitBucket Control Freak.
+			\end{itemize}
+			\item Split load with my colleague on work stream lead activities coordinating with other teams on deployments to the markets around the globe.
+			\item During my presence in MSD I have had reputation of DevOps and Git expert, developer with big sense for clean code and excellent problem solver with deep technical skills and experience. I was supporting colleagues from other teams, helping them to solve tricky technical problems and providing consultations to design of new solutions.
+		\end{itemize}
+	}
+
+	\cventry{December 2017--June 2019}{Linux C\texttt{++}, DevOps(Ansible, AWS cloud, Jenkins), Oracle SQL, Perl back-end developer}{contractor at Deutsche Boerse Services}{Prague}{}{
+		At this company I have been part of RTS team (Real Time Settlement) working on core of Cleasrtream bank system. For development was used technologies such as C\texttt{++}11, Oracle SQL and Perl for integration tests. I have written several new binaries including automated tests and fixed more that thousand HP Fortify critical security findings. \endgraf Because of slow on premise servers maintained manually and used both for development and integration testing and it was needed to accelerate our development cycle. First I have described all our dev infrastructure in AWS cloud using Ansbile code. Our dev infrastructure included machines for developers, Jenkins server and build and regression testing servers. Next I have speedup our automated integration tests to 1h where sequentially on prem. took 24h per project with ability to run projects in parallel. Having described infrastructure in code gave us opportunity to migrate to cloud. From that moment we had opportunity to test and review our dev and regression environment changes before actual deployment. Also it gave us reproducible deterministic environment both for automated testing and developers. Best of it is that code is written using Ansible roles designed as general reusable Lego brigs which ensured that developers was using same environment as our regression testing infrastructure. The code was written in general way so other teams has started to use our cloud solution just using slightly different parameters and Ansible roles but sharing 90\% of already written code.
+	}
+	
+	\cventry{January 2017--November 2017}{Windows UWP, \Csh{}, C\texttt{++}/CX application developer}{Master Internet}{Brno}{}{
+		Responsibility for developing and maintaining app \textit{Baby Monitor} (\href{https://www.anniebabymonitor.com/}{link}) in small team of 2 developers. The application streams video and audio. The product is designed for Universal Windows Platform (UWP), so it runs on every device, where Windows 10 is installed. This product is written mainly in \Csh{} and some performance critical parts are developed in C\texttt{++}/CX.
+		This job also included architectural proposal and development of new generation software \textit{Baby monitor 2} based on WebRTC and MQTT. Because both applications are multi-platform, it also included cooperation with other teams maintaining Android and IOS versions.
+		This job required ability to write general and maintainable code to match changing requirements and reusing previously written code. Part of implementing new features was precise documentation. TCP, UDP, REST and MQTT are used for communication. Version control was maintained by Git. IDE Visual Studio 2017 and other tools like Gitlab, Redmine, Slack were also used.
+	}
+	
+	\cventry{November 2014--October 2016}{Windows C\texttt{++} application developer}{AVG}{Brno}{}{
+		Responsible for developing and maintaining product AVG Remote Administration for managing and installing anti-viruses in companies. (\href{http://www.avg.com/us-en/remote-administration}{Link to product page.}) 
+		The product had client-sever architecture. Mainly used technologies was C\texttt{++}, MFC, REST API, WMI and Powershell and in minor use was also \Csh{}. Supported databases was Firebird, MS SQL, MySql and Oracle. For development was used Agile methodology and tools such as Git, Visual Studio, Jira, Confluence and Stash.
+		%The product was entirely written in C\texttt{++}. The product had client-server architecture together with few other support tools. Client GUI was written in MFC and server part suported to store data in databases Firebird, MS SQL, MySql or Oracle. One of them was tool for remote installation of antivirus using WMI technilogy combinated with Powershell. For development was used tools such as Git, Jira, Confluence, Stash, Visual Studio and Agile metodology. For analizing product usage statistic was used tool written in \Csh{} which stored data in MySql.
+		%\begin{itemize}%
+		%\item \underline{Admin Server}, which includes database and communicating with AVG Anti-viruses and with Admin Console. Supported databases are Firebird, MS SQL, MySql and Oracle.  
+		%\item \underline{Admin Console}, which represents UI to Admin server.
+		%\end{itemize}
+		%Another applications are:
+		%\begin{itemize}%
+		%\item \underline{Network Installer}, which performs remote installation of AVG Anti-viruses. 
+		%\item \underline{Server monitor}, which is small app controling Admin Server Service.
+		%\item \underline{Server Wizard}, which deploys and upgrades database.
+		%\end{itemize}
+		%I am participating on every component, but mainly on Network Installer which includes using WMI technology and bat and PowerShell scripts.
+		%At work we are working in Agile methodology including web tools like JIRA, Confluence and Stash. As version control system we are using Git and development IDE Visual Studio.
+		%Minor work also includes developing tool written in \Csh{} which analyzes user clicks and stores them in MySql. 
+	}
+	
+	\cventry{January 2013--October 2014}{Linux Administrator}{Unify}{Brno}{}{
+		Remote administration and monitoring of multiple Linux servers in VMware. Working with command line and scripting in Bash. Managing JIRA and Confluence and participated on migration from RHEL with Clearcase to Ubuntu with Git.}
+	
+	\section{Education}
+	\cventry{2014}{Bachelor's degree}{Brno University of Technology, Faculty of Information Technology}{}{}{University provides general IT knowledge, focused on programming mainly in C/C\texttt{++} and Linux.}
+	\cventry{2017}{Master's degree}{Zlin Tomas Bata University, Faculty of Applied Informatics}{}{}{The study was in combined form alongside permanent job.}
+	% arguments 3 to 6 can be left empty
+	%\cventry{year--year}{Degree}{Institution}{City}{\textit{college }}{Description}
+	
+	\section{Bachelors thesis}
+	\cvitem{Title}{\emph{Conversion of Models of Regular Languages}}
+	\cvitem{Description}{Thesis deals with how to didactically demonstrate models of regular languages focusing
+		on their mutual conversions. Application was programmed in C\texttt{++} using graphical library Qt 5.}
+	
+	\section{Diploma thesis}
+	\cvitem{Title}{\emph{Conversion of Models of Context-Free Languages}}
+	\cvitem{Description}{It extends upon my Bachelor's thesis about support of context-free language model conversions using same technologies.}
+	
+	\section{Languages}
+	\cvitemwithcomment{Czech}{Mother tongue}{}
+	\cvitemwithcomment{English}{Fluent}{}
+	\cvitemwithcomment{Russian}{Basics}{}
+	\cvitemwithcomment{German}{Basics}{}
+	
+	\section{Programming languages}
+	\cvitemwithcomment{Typescript}{\includegraphics[scale=0.40]{pictures/5stars.png}}{}
+	\cvitemwithcomment{Jenkins Declarative pipeline}{\includegraphics[scale=0.40]{pictures/5stars.png}}{}
+	\cvitemwithcomment{Ansible}{\includegraphics[scale=0.40]{pictures/5stars.png}}{}
+	\cvitemwithcomment{Bash}{\includegraphics[scale=0.40]{pictures/5stars.png}}{}
+	\cvitemwithcomment{C/C\texttt{++}}{\includegraphics[scale=0.40]{pictures/5stars.png}}{}
+	\cvitemwithcomment{Qt}{\includegraphics[scale=0.40]{pictures/4stars.png}}{}
+	\cvitemwithcomment{\Csh{}}{\includegraphics[scale=0.40]{pictures/4stars.png}}{}
+	\cvitemwithcomment{Perl}{\includegraphics[scale=0.40]{pictures/3stars.png}}{}
+	\cvitemwithcomment{Python}{\includegraphics[scale=0.40]{pictures/3stars.png}}{}
+	\cvitemwithcomment{Groovy}{\includegraphics[scale=0.40]{pictures/3stars.png}}{}
+	\cvitemwithcomment{Java}{\includegraphics[scale=0.40]{pictures/3stars.png}}{}
+	\cvitemwithcomment{Robot Framework}{\includegraphics[scale=0.40]{pictures/2stars.png}}{}
+	\cvitemwithcomment{Powershell}{\includegraphics[scale=0.40]{pictures/2stars.png}}{}
+	\cvitemwithcomment{\LaTeX}{\includegraphics[scale=0.40]{pictures/2stars.png}}{(This CV and Diploma thesis are written in \LaTeX)}
+	
+	\cvitemwithcomment{HTML/CSS}{\includegraphics[scale=0.40]{pictures/2stars.png}}{}
+	
+	
+	\section{OS preferences}
+	\cvitemwithcomment{Linux}{\includegraphics[scale=0.40]{pictures/5stars.png}}{(My favorite distributions are Ubuntu and Debian)}
+	\cvitemwithcomment{Mac/Unix}{\includegraphics[scale=0.40]{pictures/5stars.png}}{}
+	\cvitemwithcomment{Windows}{\includegraphics[scale=0.40]{pictures/3stars.png}}{}
+	
+	\section{Code editors preferences}
+	\cvitemwithcomment{VS Code}{\includegraphics[scale=0.40]{pictures/5stars.png}}{}
+	\cvitemwithcomment{Qt Creator}{\includegraphics[scale=0.40]{pictures/5stars.png}}{}
+	\cvitemwithcomment{TeXstudio}{\includegraphics[scale=0.40]{pictures/5stars.png}}{}
+	\cvitemwithcomment{Visual Studio}{\includegraphics[scale=0.40]{pictures/5stars.png}}{}
+	\cvitemwithcomment{Vim}{\includegraphics[scale=0.40]{pictures/4stars.png}}{}
+	\cvitemwithcomment{Atom}{\includegraphics[scale=0.40]{pictures/4stars.png}}{}
+	\cvitemwithcomment{Pycharm}{\includegraphics[scale=0.40]{pictures/4stars.png}}{}
+	
+	\section{Projects}
+	\cvitemwithcomment{C\texttt{++}, Qt}{}
+	{
+		\begin{itemize}
+			\item Regular convertor (2014) - \href{https://github.com/navrkald/regularConvertor}{Link to sources}
+			\begin{itemize}
+				\item Educational application for conversion finite automata and regular expression.
+			\end{itemize}
+			\item Contex-free convertor (2016) - \href{https://github.com/navrkald/regularConvertor}{Link to sources}
+			\begin{itemize}
+				\item Basicaly it is Regular convertor extended of models of context-free languages.
+			\end{itemize}
+			\item Game draughts (2013)
+			\begin{itemize}
+				\item Graphical application for playing draughts with human player or with computer.
+				\item Network application client-server.
+			\end{itemize}	 
+		\end{itemize}
+	}
+	\cvitemwithcomment{C\texttt{++}, wxWidgets}{}
+	{
+		\begin{itemize}
+			\item Game pong - written in C\texttt{++} and GUI in wxWidgets (2015) - \href{https://github.com/navrkald/Game-pong}{Link to sources}  	 
+		\end{itemize}
+	}
+	
+	\cvitemwithcomment{C\texttt{++}}{}
+	{
+		\begin{itemize}
+			\item Discrete simulator (2012)
+			\begin{itemize}
+				\item Application also offers support infrastructure for discrete modelling of queueing systems.
+			\end{itemize}
+			\item 24h challenge to create DNS cache optimalized for high performance (2016) - \href{https://github.com/navrkald/DNSCache}{Link to sources}
+			\begin{itemize}
+				\item Application uses custom implementation of double linked queue for keep order of DNS records (to free most oldest records) with direct access to elements and unordered map (hash table) from standard library. (Insert, update and search operations are done in constant time!)
+			\end{itemize}
+		\end{itemize}
+	}
+	\cvitemwithcomment{C}{}
+	{
+		\begin{itemize}
+			\item Series of homeworks of programming NVIDIA graphics card written in CUDA using C. (2016) \href{https://github.com/navrkald/Zlin_NVIDIA_programming_homeworks}{Link to sources}
+			\item Series of C homeworks at school in Zlin (2016) - \href{https://github.com/navrkald/Zlin-C-programming-homeworks}{Link to sources} 
+			\item Graph analyser (2012)
+			\begin{itemize}
+				\item Text program which analyse undirected graphs and print their properties.
+				\item Input is loaded in format called Trivial Graph Format (TGF).
+			\end{itemize}
+			\item TCP scaner (2012)
+			\begin{itemize}
+				\item Network program which scans selected TCP ports on selected computers.
+				\item Application uses BSD sockets.
+			\end{itemize}	
+			\item Interpreter for language Lua (2011)
+			\begin{itemize}
+				\item Interpreter consist of lexical parser, syntactic parser, expression parser and interpreter.
+			\end{itemize}
+			%		\item Sleeping barber problem (2011)
+			%		\begin{itemize}
+			%			\item Solving using Linux semaphores and processes.
+			%		\end{itemize}											
+		\end{itemize}
+	}
+	\cvitemwithcomment{Java}{}
+	{
+		\begin{itemize}
+			\item Petri net simulator (2012)	
+			\begin{itemize}
+				\item Includes editor of Petri net and performing simulation.
+				\item Network application client-server.
+			\end{itemize}
+		\end{itemize}
+	}
+	
+	\cvitemwithcomment{\Csh{}}{}
+	{
+		\begin{itemize}
+			\item SQM Analyzer - Enxtend and maintain at AVG (2016)
+			\begin{itemize}
+				\item Gets text files with data how customers are using AVG Remote Administraton, and feads with this data MySql db. 	
+				\item In GUI (Winforms) shows graphs and tables with structuded data.
+			\end{itemize}
+			\item Graphic database application - school project (2013)	
+		\end{itemize}
+	}
+	
+	\cvitemwithcomment{python, wxWidgets}{}
+	{
+		\begin{itemize}
+			\item Simple calculator - School project in Zlin (2016) - \href{https://github.com/navrkald/Zlin_wxWidgets_python_simple_calculator}{Link to sources} 
+		\end{itemize}
+	}
+	
+	\cvitemwithcomment{\LaTeX}{}
+	{
+		\begin{itemize}
+			\item This CV - \href{https://github.com/navrkald/CV_david_navrkal}{Link to sources} 
+		\end{itemize}
+	}
+	
+	\section{Interests}
+	\cvitem{Technical}{New technologies, Linux, OpenSource, programming, Raspberry Pi, ownCloud, Android, understanding how technologies works, disassembling stuff.} 
+	\cvitem{Non-technical}{Trips in nature, gardening, computer games, bicycle, meeting with friend in pub, cooking, computer and board games, movies, personal development, popular science, listening music, traveling and reading.}
+	
+	
+
+	\clearpage
+\end{document}
